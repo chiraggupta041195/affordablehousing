@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<title>CG Affordable Housing</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<head>
+  <link rel="icon" href="http://icons.iconarchive.com/icons/graphicloads/colorful-long-shadow/256/Home-icon.png">
+
+<style>
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 500px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 500px;
+}
+
+
+/*Constraint form styling*/
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>CG</b> Affordable Housing</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#technologies" class="w3-bar-item w3-button">Technologies</a>
+      <a href="#examples" class="w3-bar-item w3-button">Examples</a>
+      <a href="#solution" class="w3-bar-item w3-button">Solution</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="https://www.mhponline.org/images/stories/images/policy/hfa_logo_final_noyear.png" alt="Architecture" width="1500" height="800">
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>CG</b></span> <span class="w3-hide-small w3-text-light-grey">Affordable Housing</span></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Technologies Section -->
+  <div class="w3-container w3-padding-32" id="technologies">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">TECHNOLOGIES  </h3>
+  </div>
+
+  <button class="accordion">Precast Sandwich Panel Systems</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Advance Building System EMMEDUE')" id="defaultOpen">Advance Building System EMMEDUE</button>
+  <button class="tablinks" onclick="openCity(event, 'Rapid Panels')">Rapid Panels</button>
+  <button class="tablinks" onclick="openCity(event, 'Quickbuild 3D Panels')">Quickbuild 3D Panels</button>
+  <button class="tablinks" onclick="openCity(event, 'Reinforced EPS Core Panels')">Reinforced EPS Core Panels</button>
+  <button class="tablinks" onclick="openCity(event, 'Concrewall Panel System')">Concrewall Panel System</button>
+  <button class="tablinks" onclick="openCity(event, 'GFRG')">GFRG</button>
+</div>
+
+<div id="Advance Building System EMMEDUE" class="tabcontent">
+  <h3>Advance Building System EMMEDUE</h3>
+  <p>FEATURES</p>
+</div>
+
+<div id="Rapid Panels" class="tabcontent">
+  <h3>Rapid Panels</h3>
+  <p>Features</p> 
+</div>
+
+<div id="Quickbuild 3D Panels" class="tabcontent">
+  <h3>Quickbuild 3D Panels</h3>
+  <p>Features</p>
+</div>
+
+<div id="Reinforced EPS Core Panels" class="tabcontent">
+  <h3>Reinforced EPS Core Panels</h3>
+  <p>Features</p> 
+</div>
+
+<div id="Concrewall Panel System" class="tabcontent">
+  <h3>Concrewall Panel System</h3>
+  <p>Features</p> 
+</div>
+
+<div id="GFRG" class="tabcontent">
+  <h3>GFRG</h3>
+  <p>Features</p> 
+</div>
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</div>
+
+<button class="accordion">Steel Structural Systems</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Light Gauge Steel Structural System')" id="defaultOpen">Light Gauge Steel Structural System</button>
+  <button class="tablinks" onclick="openCity(event, 'LGSS with infill concrete panels')">LGSS with infill concrete panels</button>
+  <button class="tablinks" onclick="openCity(event, 'Steel Structural Systems')">Steel Structural Systems</button>
+
+</div>
+
+<div id="Light Gauge Steel Structural System" class="tabcontent">
+  <h3>Light Gauge Steel Structural System (LGSS)</h3>
+  <p>FEATURES</p>
+</div>
+
+<div id="LGSS with infill concrete panels" class="tabcontent">
+  <h3>LGSS with infill concrete panels</h3>
+  <p>Features</p> 
+</div>
+
+<div id="Steel Structural Systems" class="tabcontent">
+  <h3>Steel Structural Systems</h3>
+  <p>Features</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</div>
+
+<button class="accordion">Precast Concrete Construction Systems</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+      <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Waffle-crete Building System')" id="defaultOpen">Waffle-crete Building System</button>
+  <button class="tablinks" onclick="openCity(event, 'Precast Large Concrete Panel System')">Precast Large Concrete Panel System</button>
+  <button class="tablinks" onclick="openCity(event, 'Industrialised 3-S System')">Industrialised 3-S System</button>
+
+</div>
+
+<div id="Waffle-crete Building System" class="tabcontent">
+  <h3>Waffle-crete Building System</h3>
+  <p>FEATURES</p>
+</div>
+
+<div id="Precast Large Concrete Panel System" class="tabcontent">
+  <h3>Precast Large Concrete Panel System</h3>
+  <p>Features</p> 
+</div>
+
+<div id="Industrialised 3-S System" class="tabcontent">
+  <h3>Industrialised 3-S System</h3>
+  <p>Features</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</div>
+
+<button class="accordion">Parameters</button>
+<div class="panel">
+  <p>Lorem </p>
+
+  <div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Safety')" id="defaultOpen">Safety</button>
+  <button class="tablinks" onclick="openCity(event, 'Functionality')">Functionality</button>
+  <button class="tablinks" onclick="openCity(event, 'Sustainability')">Sustainability</button>
+  <button class="tablinks" onclick="openCity(event, 'Aesthetics')">Aesthetics</button>
+  <button class="tablinks" onclick="openCity(event, 'Economy')">Economy</button>
+  <button class="tablinks" onclick="openCity(event, 'Past Projects')">Past Projects</button>
+</div>
+
+<div id="Safety" class="tabcontent">
+  <h3>Safety</h3>
+  <p>FEATURES</p>
+</div>
+
+<div id="Functionality" class="tabcontent">
+  <h3>Functionality</h3>
+  <p>Features</p> 
+</div>
+
+<div id="Sustainability" class="tabcontent">
+  <h3>Sustainability</h3>
+  <p>Features</p>
+</div>
+
+<div id="Aesthetics" class="tabcontent">
+  <h3>Aesthetics</h3>
+  <p>Features</p> 
+</div>
+
+<div id="Economy" class="tabcontent">
+  <h3>Economy</h3>
+  <p>Features</p> 
+</div>
+
+<div id="Past Projects" class="tabcontent">
+  <h3>Past Projects</h3>
+  <p>Features</p> 
+</div>
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+
+
+  <!-- Scenarios Section -->
+  <div class="w3-container w3-padding-32" id="examples">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">EXAMPLES</h3>
+  </div>
+
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="solution">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">SOLUTION</h3> 
+  </div>
+
+  <h4>Fill in the constraints</h4>
+  <div class="container">
+    <form action="/action_page.php">
+      <div class="row">
+        <div class="col-25">
+          <label for="building">Building</label>
+        </div>
+        <div class="col-75">
+          <select id="building" name="building">
+            <option value="Select">Select</option>
+            <option value="High Rise">High Rise</option>
+            <option value="Medium Rise">Medium Rise</option>
+            <option value="Low Rise">Low Rise</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="housing">Housing</label>
+        </div>
+        <div class="col-75">
+          <select id="housing" name="housing">
+            <option value="Select">Select</option>
+            <option value="Isolated Housing">Isolated Housing</option>
+            <option value="Mass Housing">Mass Housing</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="location">Location</label>
+        </div>
+        <div class="col-75">
+          <select id="location" name="location">
+            <option value="Select">Select</option>
+            <option value="North Urban">North Urban</option>
+            <option value="South Urban">South Urban</option>
+            <option value="East Urban">East Urban</option>
+            <option value="West Urban">West Urban</option>
+            <option value="North Rural">North Rural</option>
+            <option value="South Rural">South Rural</option>
+            <option value="East Rural">East Rural</option>
+            <option value="West Rural">West Rural</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-25">
+          <label for="purpose">Purpose</label>
+        </div>
+        <div class="col-75">
+          <select id="purpose" name="purpose">
+            <option value="Select">Select</option>
+            <option value="Residential">Residential</option>
+            <option value="Commercial">Commercial</option>
+            <option value="Temporary">Temporary</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Created by Chirag Gupta ©</p>
+</footer>
+
+</body>
+</html>
