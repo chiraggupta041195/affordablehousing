@@ -142,13 +142,14 @@ body {font-family: "Lato", sans-serif;}
 }
 
 /* Style the tab content */
-.tabcontent {
+div.tabcontent {
   float: left;
   padding: 0px 12px;
   border: 1px solid #ccc;
   width: 70%;
   border-left: none;
   height: 500px;
+  overflow: scroll;
 }
 
 
@@ -218,6 +219,44 @@ input[type=submit]:hover {
 }
 
 
+
+/*Buttons*/
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.block:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/*Tables*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #2F4F4F;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+
 </style>
 </head>
 
@@ -229,6 +268,7 @@ input[type=submit]:hover {
     <a href="#home" class="w3-bar-item w3-button"><b>CG</b> Affordable Housing</a>
     <!-- Float links to the right. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">About</a>
       <a href="#technologies" class="w3-bar-item w3-button">Technologies</a>
       <a href="#examples" class="w3-bar-item w3-button">Examples</a>
       <a href="#solution" class="w3-bar-item w3-button">Solution</a>
@@ -246,6 +286,17 @@ input[type=submit]:hover {
 
 <!-- Page content -->
 <div class="w3-content w3-padding" style="max-width:1564px">
+
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">ABOUT</h3>
+    <p>Welcome to the one stop solution to the affordable housing problem. We present to you the technologies and also a world class automated solution for the most apt technology to use given some constraints</p>
+    <h3>Choose which one you would like to explore</h3>
+
+  </div>
+
+
 
   <!-- Technologies Section -->
   <div class="w3-container w3-padding-32" id="technologies">
@@ -266,32 +317,234 @@ input[type=submit]:hover {
 
 <div id="Advance Building System EMMEDUE" class="tabcontent">
   <h3>Advance Building System EMMEDUE</h3>
-  <p>FEATURES</p>
+  <p>The EMMEDUE panel comprises of a layer of mesh on either side of EPS core welded  together by steel ortogonal (trusses) which penetrates through EPS core. The panels are joined together in a desired configuration on site and sprayed on both sides with shotcrete to form a sandwich type construction.</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <table>
+            <tr>
+              <th>Fire Resistance</th>
+              <td>Self-extinguishing panels, reinforced concrete as external coat to sides of the panel - inhibits combustion</td>
+            </tr>
+            <tr>
+              <th>Seismic Performance</th>
+              <td>Lightweight, low seismic mass, rigid with two sheets of reinforced plaster</td>
+            </tr>
+            <tr>
+              <th>Wind Performance</th>
+              <td>Laboratory tested for cyclonic winds</td>
+            </tr>
+            <tr>
+              <th>Foundation Design</th>
+              <td>Conventional foundations need to be used</td>
+            </tr>
+            <tr>
+              <th>Water Penetration</th>
+              <td>Exterior coating of 25mm thickness is applied after shotcreting for water proofing</td>
+            </tr>
+          </table>
+
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
 </div>
 
 <div id="Rapid Panels" class="tabcontent">
   <h3>Rapid Panels</h3>
-  <p>Features</p> 
+  <p>The Rapid Panel is a prefabricated assembly of high-strength steel wire forming a panel with a core of expanded polystyrene (EPS). During construction, Rapid Panels are installed as walls and/or slabs. Specified mixtures of mortar or concrete are applied to the surfaces of the panels to complete the structure. The basic unit of the Rapid Panel is the zig-zag truss.</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
 </div>
 
 <div id="Quickbuild 3D Panels" class="tabcontent">
   <h3>Quickbuild 3D Panels</h3>
-  <p>Features</p>
+  <p>QuickBuild Panel system consists of a welded wire space frame integrated with a polystyrene insulation core. The wall panel is placed in position and a wythe of concrete is applied to both sides. The wall panel receives its strength and rigidity from the diagonal cross wires welded to the welded-wire fabric on each side. This combination produces a truss behavior, which provides rigidity and shear terms for a full composite behavior.</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
 </div>
 
 <div id="Reinforced EPS Core Panels" class="tabcontent">
   <h3>Reinforced EPS Core Panels</h3>
-  <p>Features</p> 
+  <p>Expanded Polystyrene Core Panel System is a factory produced panel system for the construction of low rise buildings upto G+3 and as filler walls in high rise RCC and steel frame buildings. In this technique a core of undulated polystyrene is covered with interconnected zinc coated welded wire mesh on both sided reinforcement and shortcrete concrete.</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
 </div>
 
 <div id="Concrewall Panel System" class="tabcontent">
   <h3>Concrewall Panel System</h3>
-  <p>Features</p> 
+  <p>The Concrewall System is an industrial system for the construction of structural walls of reinforced concrete for building in single panel up to G+3. The system is composed of a factory produced panel of undulated (wave shape) polystyrene covered on both sides by an electro-welded zinc coated square mesh of galvanized steel and linked by 40 connectors per sq m made of high-elastic-limit 3mm dia wires realizing a 3 dimensional hyper-static reinforced steel.</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
 </div>
 
 <div id="GFRG" class="tabcontent">
   <h3>GFRG</h3>
-  <p>Features</p> 
+  <p>Glass Fiber Reinforced Gypsum (GFRG) Panel branded as Rapidwall is a building panel product, made of calcined gypsum, plaster, reinforced with glass fibers, for Mass-scale building construction, was originally developed and used since 1990 in Australia</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
 </div>
 
 
@@ -328,17 +581,107 @@ document.getElementById("defaultOpen").click();
 
 <div id="Light Gauge Steel Structural System" class="tabcontent">
   <h3>Light Gauge Steel Structural System (LGSS)</h3>
-  <p>FEATURES</p>
+  <p>Light Gauge Framed Steel Structure (LGFSS) is based on factory made galvanized light gauge steel components produced by the cold forming method assembled as panels at site forming structural steel framework of a building and varying wall and floor construction as detailed in this Certificate. The panels are assembled on site with screws and bolts to form the internal and separating walls and inner leaf of the external walls of a building and floors & ceiling.</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
 </div>
 
 <div id="LGSS with infill concrete panels" class="tabcontent">
   <h3>LGSS with infill concrete panels</h3>
-  <p>Features</p> 
+  <p>Light Gauge Steel Framed Structure with Infill Concrete Panels (LGSFSICP) Technology is an innovative emerging building and construction technology using factory made Light Gauge Steel Framed Structure (LGSFS), light weight concrete and precast panels.</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div> 
 </div>
 
 <div id="Steel Structural Systems" class="tabcontent">
   <h3>Steel Structural Systems</h3>
-  <p>Features</p>
+  <p>Factory Made Fast Track Modular Building construction system based on steel structure with different walling components is designed according to relevant Indian / International standards to withstand various forces, manufactured and fabricated in a controlled factory environment and shipped to a prepared building site for installation.</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
 </div>
 
 <script>
@@ -375,17 +718,107 @@ document.getElementById("defaultOpen").click();
 
 <div id="Waffle-crete Building System" class="tabcontent">
   <h3>Waffle-crete Building System</h3>
-  <p>FEATURES</p>
+  <p>Waffle-Crete Building system consists of large structural ribbed panels of reinforced precast concrete, bolted together and the joints between the panels are caulked to form the walls, floor and pitched or flat roofs of buildings.</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
 </div>
 
 <div id="Precast Large Concrete Panel System" class="tabcontent">
   <h3>Precast Large Concrete Panel System</h3>
-  <p>Features</p> 
+  <p>Precast construction system is generally a large panel system, modular system or a combination of both.</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
 </div>
 
 <div id="Industrialised 3-S System" class="tabcontent">
   <h3>Industrialised 3-S System</h3>
-  <p>Features</p>
+  <p>Precast dense concrete hollow column shell of appropriate size are used in combination with precast dense concrete rectangular / ‘T’ shape / ‘L’ Shape beams with light weight reinforced autoclaved cellular concrete slabs for floors and roofs.</p>
+
+          <button class="accordion">Safety</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Functionality</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Sustainability</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Aesthetics</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Economy</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
+
+        <button class="accordion">Past Projects</button>
+        <div class="panel">
+          <p>L</p>
+        </div>
 </div>
 
 <script>
@@ -424,32 +857,58 @@ document.getElementById("defaultOpen").click();
 
 <div id="Safety" class="tabcontent">
   <h3>Safety</h3>
-  <p>FEATURES</p>
+  <p>Description</p>
+  <button class="block">Fire Resistance</button>
+  <button class="block">Seismic Performance</button>
+  <button class="block">Wind Performance</button>
+  <button class="block">Foundation Design</button>
+  <button class="block">Water Penetration</button>
+  <button class="block">Compliance with National Standards</button>
 </div>
 
 <div id="Functionality" class="tabcontent">
   <h3>Functionality</h3>
-  <p>Features</p> 
+  <p>Description</p>
+  <button class="block">Thermal Behaviour</button>
+  <button class="block">Acoustic Behaviour</button>
+  <button class="block">Repetitiveness of units</button>
+  <button class="block">Number of stories</button>
+  <button class="block">Installation/Assembly</button>
+  <button class="block">MEP Design</button> 
 </div>
 
 <div id="Sustainability" class="tabcontent">
   <h3>Sustainability</h3>
-  <p>Features</p>
+  <p>Description</p>
+  <button class="block">Lifecycle cost/ Maintenance</button>
+  <button class="block">Green building standard</button>
+  <button class="block">Compatibility with existing systems</button>
+  <button class="block">Materials used (Natural/ Engineered)</button>
 </div>
 
 <div id="Aesthetics" class="tabcontent">
   <h3>Aesthetics</h3>
-  <p>Features</p> 
+  <p>Description</p>
+  <button class="block">Finishes flexibility</button>
+  <button class="block">Building elements</button>
 </div>
 
 <div id="Economy" class="tabcontent">
   <h3>Economy</h3>
-  <p>Features</p> 
+  <p>Description</p>
+  <button class="block">Ease of fabrication</button>
+  <button class="block">Local material and labour</button>
+  <button class="block">Economies of scale</button>
+  <button class="block">Limitations</button>
+  <button class="block">Space and site constraints</button>
 </div>
 
 <div id="Past Projects" class="tabcontent">
   <h3>Past Projects</h3>
-  <p>Features</p> 
+  <p>Description</p>
+  <button class="block">Certification holder</button>
+  <button class="block">International Project</button>
+  <button class="block">Indian Projects</button>
 </div>
 
 
@@ -493,13 +952,13 @@ for (i = 0; i < acc.length; i++) {
 
 
 
-  <!-- Scenarios Section -->
+  <!-- Examples Section -->
   <div class="w3-container w3-padding-32" id="examples">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">EXAMPLES</h3>
   </div>
 
 
-  <!-- About Section -->
+  <!-- Solution Section -->
   <div class="w3-container w3-padding-32" id="solution">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">SOLUTION</h3> 
   </div>
