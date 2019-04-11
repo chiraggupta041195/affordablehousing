@@ -239,25 +239,65 @@ input[type=submit]:hover {
 }
 
 /*Tables*/
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
 
-td, th {
-  border: 1px solid #2F4F4F;
-  text-align: left;
-  padding: 8px;
-}
+  td, th {
+    border: 1px solid #2F4F4F;
+    text-align: left;
+    padding: 8px;
+  }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
 
-a:link{
-text-decoration: none;
-}
+  a:link{
+  text-decoration: none;
+  }
+
+
+/*Tooltip text*/
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+
 
 </style>
 </head>
@@ -287,14 +327,31 @@ text-decoration: none;
 </header>
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
+<div class="w3-content w3-padding" style="max-width:2000px">
 
 
   <!-- About Section -->
   <div class="w3-container w3-padding-32" id="about">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">ABOUT</h3>
     <p>Welcome to the one stop solution to the affordable housing problem. We present to you the technologies and also a world class automated solution for the most apt technology to use given some constraints</p>
-    <h3>Choose which one you would like to explore</h3>
+    <h4>Choose which one you would like to explore</h4>
+    
+    <div class="tooltip">
+      <a href="https://docs.google.com/spreadsheets/d/1W_ZlDjHI33DPTBVAhBp6rj2sZHk3fzGn6Nz2IyG7WD8/edit#gid=1260755694" target="_blank"><input type="button" class="w3-button w3-green" value="Exhaustive Matrix"></a>
+    <span class="tooltiptext">Contains in detail about the technologies and the parameters</span>
+    </div>
+
+
+    <div class="tooltip">
+      <a href="https://docs.google.com/spreadsheets/d/1mMV4D8GqgCPBngYeVwJK3zN8ocDG1phAE8MmyBp-1oY/edit#gid=1791636402" target="_blank"><input type="button" class="w3-button w3-green" value="Condense Matrix"></a>
+    <span class="tooltiptext">Contains in brief about the technologies and the parameters</span>
+    </div>
+
+    <div class="tooltip">
+      <a href="#solution"><input type="button" class="w3-button w3-green" value="Optimum Technology"></a> 
+    <span class="tooltiptext">Select the constraints and find the apt technology</span>
+    </div>
+
 
   </div>
 
@@ -304,6 +361,98 @@ text-decoration: none;
   <div class="w3-container w3-padding-32" id="technologies">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">TECHNOLOGIES  </h3>
   </div>
+
+<button class="accordion">Parameters</button>
+    <div class="panel">
+      <p>Some info </p>
+
+      <div class="tab">
+      <button class="tablinks" onclick="openCity(event, 'Safety')" id="defaultOpen">Safety</button>
+      <button class="tablinks" onclick="openCity(event, 'Functionality')">Functionality</button>
+      <button class="tablinks" onclick="openCity(event, 'Sustainability')">Sustainability</button>
+      <button class="tablinks" onclick="openCity(event, 'Aesthetics')">Aesthetics</button>
+      <button class="tablinks" onclick="openCity(event, 'Economy')">Economy</button>
+      <button class="tablinks" onclick="openCity(event, 'Past Projects')">Past Projects</button>
+    </div>
+
+    <div id="Safety" class="tabcontent">
+      <h3>Safety</h3>
+      <p>Description</p>
+      <button class="block">Fire Resistance</button>
+      <button class="block">Seismic Performance</button>
+      <button class="block">Wind Performance</button>
+      <button class="block">Foundation Design</button>
+      <button class="block">Water Penetration</button>
+      <button class="block">Compliance with National Standards</button>
+    </div>
+
+    <div id="Functionality" class="tabcontent">
+      <h3>Functionality</h3>
+      <p>Description</p>
+      <button class="block">Thermal Behaviour</button>
+      <button class="block">Acoustic Behaviour</button>
+      <button class="block">Repetitiveness of units</button>
+      <button class="block">Number of stories</button>
+      <button class="block">Installation/Assembly</button>
+      <button class="block">MEP Design</button> 
+    </div>
+
+    <div id="Sustainability" class="tabcontent">
+      <h3>Sustainability</h3>
+      <p>Description</p>
+      <button class="block">Lifecycle cost/ Maintenance</button>
+      <button class="block">Green building standard</button>
+      <button class="block">Compatibility with existing systems</button>
+      <button class="block">Materials used (Natural/ Engineered)</button>
+    </div>
+
+    <div id="Aesthetics" class="tabcontent">
+      <h3>Aesthetics</h3>
+      <p>Description</p>
+      <button class="block">Finishes flexibility</button>
+      <button class="block">Building elements</button>
+    </div>
+
+    <div id="Economy" class="tabcontent">
+      <h3>Economy</h3>
+      <p>Description</p>
+      <button class="block">Ease of fabrication</button>
+      <button class="block">Local material and labour</button>
+      <button class="block">Economies of scale</button>
+      <button class="block">Limitations</button>
+    </div>
+
+    <div id="Past Projects" class="tabcontent">
+      <h3>Past Projects</h3>
+      <p>Description</p>
+      <button class="block">Certification holder</button>
+      <button class="block">International Project</button>
+      <button class="block">Indian Projects</button>
+    </div>
+
+
+    <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+
+</div>
+
+
 
   <button class="accordion">Precast Sandwich Panel Systems</button>
 <div class="panel">
@@ -456,8 +605,6 @@ text-decoration: none;
         <button class="block">
             <a href="http://bmtpc.org/DataFiles/CMS/file/PDF_Files/26_PAC-EMMEDUE.pdf" target="_blank">BMTPC Document</a>
         </button>
-
-
 </div>
 
 <div id="Rapid Panels" class="tabcontent">
@@ -659,22 +806,22 @@ text-decoration: none;
 
 
 <script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
   }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
 </script>
 
 </div>
@@ -952,95 +1099,6 @@ document.getElementById("defaultOpen").click();
 
 </div>
 
-<button class="accordion">Parameters</button>
-<div class="panel">
-  <p>Some info </p>
-
-  <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Safety')" id="defaultOpen">Safety</button>
-  <button class="tablinks" onclick="openCity(event, 'Functionality')">Functionality</button>
-  <button class="tablinks" onclick="openCity(event, 'Sustainability')">Sustainability</button>
-  <button class="tablinks" onclick="openCity(event, 'Aesthetics')">Aesthetics</button>
-  <button class="tablinks" onclick="openCity(event, 'Economy')">Economy</button>
-  <button class="tablinks" onclick="openCity(event, 'Past Projects')">Past Projects</button>
-</div>
-
-<div id="Safety" class="tabcontent">
-  <h3>Safety</h3>
-  <p>Description</p>
-  <button class="block">Fire Resistance</button>
-  <button class="block">Seismic Performance</button>
-  <button class="block">Wind Performance</button>
-  <button class="block">Foundation Design</button>
-  <button class="block">Water Penetration</button>
-  <button class="block">Compliance with National Standards</button>
-</div>
-
-<div id="Functionality" class="tabcontent">
-  <h3>Functionality</h3>
-  <p>Description</p>
-  <button class="block">Thermal Behaviour</button>
-  <button class="block">Acoustic Behaviour</button>
-  <button class="block">Repetitiveness of units</button>
-  <button class="block">Number of stories</button>
-  <button class="block">Installation/Assembly</button>
-  <button class="block">MEP Design</button> 
-</div>
-
-<div id="Sustainability" class="tabcontent">
-  <h3>Sustainability</h3>
-  <p>Description</p>
-  <button class="block">Lifecycle cost/ Maintenance</button>
-  <button class="block">Green building standard</button>
-  <button class="block">Compatibility with existing systems</button>
-  <button class="block">Materials used (Natural/ Engineered)</button>
-</div>
-
-<div id="Aesthetics" class="tabcontent">
-  <h3>Aesthetics</h3>
-  <p>Description</p>
-  <button class="block">Finishes flexibility</button>
-  <button class="block">Building elements</button>
-</div>
-
-<div id="Economy" class="tabcontent">
-  <h3>Economy</h3>
-  <p>Description</p>
-  <button class="block">Ease of fabrication</button>
-  <button class="block">Local material and labour</button>
-  <button class="block">Economies of scale</button>
-  <button class="block">Limitations</button>
-</div>
-
-<div id="Past Projects" class="tabcontent">
-  <h3>Past Projects</h3>
-  <p>Description</p>
-  <button class="block">Certification holder</button>
-  <button class="block">International Project</button>
-  <button class="block">Indian Projects</button>
-</div>
-
-
-<script>
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
-
-</div>
 
 <script>
 var acc = document.getElementsByClassName("accordion");
@@ -1064,6 +1122,7 @@ for (i = 0; i < acc.length; i++) {
   <!-- Examples Section -->
   <div class="w3-container w3-padding-32" id="examples">
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">EXAMPLES</h3>
+    <p>Slide show of images with description of examples</p>
   </div>
 
 
